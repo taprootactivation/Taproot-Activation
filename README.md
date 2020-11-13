@@ -5,6 +5,8 @@ More in depth information can be found in this article by Aaron Van Wirdum [Tapr
  
  A softfork is a change to the bitcoin protocol wherein only previously valid blocks/transactions are made invalid. Since old nodes will recognize the new blocks as valid, a softfork is backward-compatible. See more here: https://en.bitcoin.it/wiki/Softfork
  
+ ------
+ 
 **There are several different Bitcoin Improvement  activation methods for Taproots upgrade, they are:**
   
 1. **BIP 8: BIP 9 (and BIP 8 without forced activation):** The upgrade will activate if and when 95% of hash power signals support for the upgrade. If after a year this threshold hasn't been reached, the upgrade expires. Both the 95% treshold and the one-year expiry parameters could be set differently.
@@ -20,6 +22,8 @@ There are also ideas to combine different proposals. For example, try BIP 9 firs
 1. What threshold percentage should be met
 1. Expiry date
 1. Coinbase signal
+
+------
  
  Mining Pool |   Taproot?     |  Activation   | Threshold    | Expiry | Coinbase Singal
 ------------ | ------------- | ------------- | ------------- | ------------- | -------------
