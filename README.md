@@ -1,7 +1,7 @@
 
 
 ## Taproot expands Bitcoin’s smart contract flexibility, while offering more privacy. By combining both MAST (Merkelized Abstract Syntax Tree) & Schnoor, Taproot is able to mask a complex smart contract as a regular bitcoin transaction.** 
-More information on how this works can be found in this article by Aaron Van Wirdum [Taproot Is Coming: What It Is, And How It Will Benefit Bitcoin](https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
+More in depth information can be found in this article by Aaron Van Wirdum [Taproot Is Coming: What It Is, And How It Will Benefit Bitcoin](https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
  
 **In order to activate the Taproot protocol upgrade a consensus must be met by the majority of Bitcoin nodes otherwise known as a softfork. There are several different activation methods to achieve this upgrade, they are:**
   
