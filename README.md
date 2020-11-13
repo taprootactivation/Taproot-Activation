@@ -1,3 +1,5 @@
 # taprootactivation.com
 
-Type here..
+ Taproot expands Bitcoin’s smart contract flexibility, while offering more privacy. 
+ 
+ 
