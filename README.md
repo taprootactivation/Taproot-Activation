@@ -7,7 +7,7 @@ More in depth information can be found in this article by Aaron Van Wirdum [Tapr
  
 **There are several different Bitcoin Improvement  activation methods for Taproots upgrade, they are:**
   
-1. **BIP 8: BIP 9 (and BIP 8 without forced activation):** The upgrade will activate if and when 95% of hash power signals support for the upgrade. If after a year this threshold hasn't been reached, the upgrade expires. Both the 95% treshold and the one-year expiry parameters could be set differently.
+1. **BIP 9 (and BIP 8 without forced activation):** The upgrade will activate if and when 95% of hash power signals support for the upgrade. If after a year this threshold hasn't been reached, the upgrade expires. Both the 95% treshold and the one-year expiry parameters could be set differently.
 
 1. **BIP 8 (with forced activation):** The upgrade will activate if and when 95% of hash power signals support for the upgrade. If after a year this threshold hasn't been reached, the upgrade activates regardless, and blocks that don't follow the new rules will be rejected. Both the 95% treshold and the one-year expiry parameters could be set differently.
 
