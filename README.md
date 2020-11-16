@@ -1,5 +1,5 @@
 ## Taproot is a proposed Bitcoin protocol upgrade that can be deployed as a backwards-compatibe soft fork. By combining the Schnorr signature algorithm with MAST (Merkelized Abstract Syntax Trees) and a new scripting language called Tapscript, Taproot will expand Bitcoin’s smart contract flexibility, while offering more privacy by letting users mask complex smart contracts as a regular bitcoin transaction.
-More in depth information can be found in this article by Aaron Van Wirdum [Taproot Is Coming: What It Is, And How It Will Benefit Bitcoin](https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
+More in depth information can be found in this article [Taproot Is Coming: What It Is, And How It Will Benefit Bitcoin](https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
  
  A softfork is a change to the bitcoin protocol wherein only previously valid blocks/transactions are made invalid. Since old nodes will recognize the new blocks as valid, a softfork is backward-compatible. See more here: https://en.bitcoin.it/wiki/Softfork
  
