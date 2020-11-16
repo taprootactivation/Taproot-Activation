@@ -36,4 +36,4 @@ Slush Pool | Yes | BIP8 | 90% | 1 year |
  | | |
  | | | 
 
-Want to be included in the list? Email alejandro@poolin.com or create a pull request [here](https://github.com/taprootactivation).
+Want to be included in the list? Email alejandro@poolin.com or create a pull request [here](https://github.com/taprootactivation). Meida enquires alejandro@poolin.com
