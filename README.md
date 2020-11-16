@@ -3,7 +3,7 @@ More in depth information can be found in this article [Taproot Is Coming: What 
  
   ------
  
-A softfork is a change to the bitcoin protocol wherein only previously valid blocks/transactions are made invalid. Since old nodes will recognize the new blocks as valid, a softfork is backward-compatible. See more here: https://en.bitcoin.it/wiki/Softfork
+A softfork is a change to the bitcoin protocol wherein only previously valid blocks/transactions are made invalid. Since old nodes will recognize the new blocks as valid, a softfork is backward-compatible. See more here: [Soft fork bitcoin wiki]https://en.bitcoin.it/wiki/Softfork
 
 Soft forks can be activated in several ways. Several of the previous soft forks have been activated using BIP 9 (Bitcoin Improvement Proposal 9), which requires a (super)majority of miners (by hash power) to signal support for the upgrade. A proposed alternative is BIP 8, which could activate the upgrade after some time even without a (super)majority of miners signaling support. There are also ideas to combine BIP 9-style activation with BIP 8-style activation.
 
