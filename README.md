@@ -13,7 +13,7 @@ In short:
 
 1. **BIP 8 (with forced activation):** The upgrade will activate if and when 95% of hash power signals support for the upgrade. If after a year this threshold hasn't been reached, the upgrade activates regardless, and blocks that don't follow the new rules will be rejected. Both the 95% threshold and the one-year expiry parameters could be set differently.
 
-There are also ideas to combine different proposals. For example, try BIP 9 first, if it expires, try again with BIP 8 (with forced activation). More in depth information on Taproot activation can be found in this Bitcoin Magazine article by Aaron van Wirdum: [BIP 8, BIP 9 Or Modern Soft Fork Activation: How Bitcoin Could Upgrade Next](https://bitcoinmagazine.com/articles/bip-8-bip-9-or-modern-soft-fork-activation-how-bitcoin-could-upgrade-next)
+There are also ideas to combine different proposals. For example, try BIP 9 first, if it expires, try again with BIP 8 (with forced activation). More in depth information on Taproot activation can be found in the Bitcoin Wiki [Taproot activation proposals Bitcoin](https://en.bitcoin.it/wiki/Taproot_activation_proposals) or in this Bitcoin Magazine article by Aaron van Wirdum: [BIP 8, BIP 9 Or Modern Soft Fork Activation: How Bitcoin Could Upgrade Next](https://bitcoinmagazine.com/articles/bip-8-bip-9-or-modern-soft-fork-activation-how-bitcoin-could-upgrade-next)
 
  
 **The aim of this site is to assist in the activation of the Taproot soft fork. We have reached out to several Bitcoin mining pools to find out if:**
