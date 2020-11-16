@@ -26,7 +26,7 @@ There are also ideas to combine different proposals. For example, try BIP 9 firs
 1. If so, which activation method they prefer
 1. What threshold hash power percentage should be met to activate the upgrade
 1. How long it should take before activation either expires or is enforced
-1. If they want to insert a coinbase message in their blocks to announce their preference (even before the actual activation window opens)
+1. If they want to insert a coinbase message in a block to announce their preference (even before the actual activation window opens)
 
 ------
  
