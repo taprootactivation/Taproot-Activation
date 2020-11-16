@@ -32,7 +32,7 @@ There are also ideas to combine different proposals. For example, try BIP 9 firs
  
  Mining Pool |   Taproot?     |  Activation   | Threshold    | Expiry | Coinbase Signal
 ------------ | ------------- | ------------- | ------------- | ------------- | -------------
-Poolin | Yes | BIP9 | 95% | 1 year | 1 |
+Poolin | Yes | BIP9 | 95% | 1 year |  
 Slush Pool | Yes | BIP8 | 90% | 1 year | 
  | | |
  | | | 
