@@ -35,5 +35,8 @@ BTC.com | Yes | BIP9 + BIP8 | 90% | 1 year + year | TBD |
  | | | 
  | | |
  | | | 
+ 
+ *Note: BIP 9 means BIP 9 or BIP 8 without forced activation.
+BIP 8 means BIP 8 with forced activation
 
 Want to be included in the list? Email alejandro@poolin.com or create a pull request [here](https://github.com/taprootactivation). Media enquires alejandro@poolin.com
