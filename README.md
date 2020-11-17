@@ -30,7 +30,7 @@ There are also ideas to combine different proposals. For example, try BIP 9 firs
 ------------ | ------------- | ------------- | ------------- | ------------- | -------------
 Poolin | Yes | BIP9 | 95% | 1 year |  
 Slush Pool | Yes | BIP8 | 90% | 1 year | 
- | | |
+BTC.com | Yes | BIP9 + BIP8 | 90% | 1 year + year | TBD |
  | | | 
  | | | 
  | | |
