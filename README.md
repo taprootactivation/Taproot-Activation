@@ -17,7 +17,6 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
  
 1. If they support the Taproot upgrade
 1. If so, which activation method they prefer
-1. What threshold hash power percentage should be met to activate the upgrade
 1. If they want to insert a coinbase message in a block to announce their preference (even before the actual activation window opens)
 
 ------
