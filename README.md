@@ -32,4 +32,5 @@ BTC.com | Yes | Modern Soft Fork Activation | TBD |
  | | | 
 
 Want to be included in the list? Email alejandro@poolin.com or create a pull request [here](https://github.com/taprootactivation). 
-Media enquires alejandro@poolin.com
+Media enquires alejandro@poolin.com or reach out on twitter [@bitentrepreneur](https://twitter.com/bitentrepreneur)
+ 
