@@ -3,7 +3,9 @@ More in depth information can be found in this Bitcoin Magazine article by Aaron
  
   ------
  
-A soft fork is a change to the Bitcoin protocol wherein only previously valid blocks/transactions are made invalid. Since old nodes will recognize the new blocks as valid, a soft fork is forward-compatible. See more here: [Soft fork bitcoin wiki](https://en.bitcoin.it/wiki/Softfork)
+A soft fork is a change to the Bitcoin protocol wherein only previously valid blocks/transactions are made invalid. Since old nodes will recognize the new blocks as valid, a soft fork is forward-compatible. See more here: [Soft fork bitcoin wiki](https://en.bitcoin.it/wiki/Softfork) 
+
+Soft forks can be activated in several ways. Several of the previous soft forks have been activated using [BIP 9](https://en.bitcoin.it/wiki/BIP_0009), which requires a (super)majority of miners (by hash power) to signal support for the upgrade. A proposed alternative is [BIP 8](https://en.bitcoin.it/wiki/BIP_0008), which could activate the upgrade after some time even without a (super)majority of miners signaling support.
 
 ## Proposal overview
 
