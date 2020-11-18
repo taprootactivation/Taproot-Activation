@@ -11,7 +11,7 @@ Soft forks can be activated in several ways. Several of the previous soft forks 
 
 ![proposal overview](https://en.bitcoin.it/w/images/en/1/19/Activation-timeline.png)
 
-More in-depth information on Taproot activation can be found in the Bitcoin Wiki [Taproot activation proposals](https://en.bitcoin.it/wiki/Taproot_activation_proposals)
+More in-depth information on [Taproot activation proposals](https://en.bitcoin.it/wiki/Taproot_activation_proposals) can be found in the Bitcion Wiki.
  
 **The aim of this site is to assist in the activation of the Taproot soft fork. We have reached out to several Bitcoin mining pools to find out if:**
  
