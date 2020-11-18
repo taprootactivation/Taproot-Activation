@@ -26,7 +26,7 @@ More in-depth information on Taproot activation can be found in the Bitcoin Wiki
 ------------ | ------------- | ------------- | ------------- |
 Poolin | Yes | BIP9 |  | 
 Slush Pool | Yes | BIP8 |  |
-BTC.com | Yes | Modern Soft Fork Activatoin | | TBD |
+BTC.com | Yes | Modern Soft Fork Activatoin | TBD |
  | | | 
  | | | 
  | | |
