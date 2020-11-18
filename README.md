@@ -25,7 +25,7 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 ------------ | ------------- | ------------- | ------------- |
 Poolin | Yes | BIP9 equivalent, BIP8(false, 1y) |  | 
 Slush Pool | Yes | BIP8 |  |
-BTC.com | Yes | Modern Soft Fork Activatoin | TBD |
+BTC.com | Yes | Modern Soft Fork Activation | TBD |
  | | | 
  | | | 
  | | |
