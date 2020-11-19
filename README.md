@@ -21,13 +21,13 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 
 ------
  
- Mining Pool |   Taproot?     |  Activation | Coinbase Signal
------------- | ------------- | ------------- | ------------- |
-[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | 
-Slush Pool | Yes | BIP8 |  |
-BTC.com | Yes | Modern Soft Fork Activation | TBD |
-F2Pool | Yes | TBD | TBD |
-AntPool | Yes | BIP8 | TBD |
+ Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support |
+------------ | ------------- | ------------- | ------------- | ------------- |
+[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) |
+Slush Pool | Yes | BIP8 |  | https://twitter.com/slush_pool/status/1329051461100204032
+BTC.com | Yes | Modern Soft Fork Activation | TBD | 
+F2Pool | Yes | TBD | TBD | https://github.com/taprootactivation/Taproot-Activation/pull/4
+AntPool | Yes | BIP8 | TBD | 
 Luxor | Yes | BIP9 equivalent |
  | | | 
 
