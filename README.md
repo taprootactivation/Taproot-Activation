@@ -27,8 +27,8 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 Slush Pool | Yes | BIP8 |  |
 BTC.com | Yes | Modern Soft Fork Activation | TBD |
 F2Pool | Yes | TBD | TBD |
- | | | 
- | | |
+AntPool | Yes | BIP8 | TBD |
+Luxor | Yes | BIP9 equivalent |
  | | | 
 
 Want to be included in the list? Email alejandro@poolin.com or create a pull request [here](https://github.com/taprootactivation). 
