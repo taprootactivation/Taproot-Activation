@@ -21,15 +21,17 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 
 ------
  
- Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support |
------------- | ------------- | ------------- | ------------- | ------------- |
-[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017)
-Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032)
-BTC.com | Yes | Modern Soft Fork Activation | TBD | 
-F2Pool | Yes | TBD | TBD | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4)
-AntPool | Yes | BIP8 | TBD | 
-Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560)
+ Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 year)](https://btc.com/stats/pool?pool_mode=year)
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- |
+[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 15.4%
+Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 3.8%
+BTC.com | Yes | Modern Soft Fork Activation | TBD | | 12.7%
+F2Pool | Yes | TBD | TBD | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 17.2%
+AntPool | Yes | BIP8 | TBD | | 11%
+Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0% 
  | | | 
+  | | | 
+   | | | 
 
 Want to be included in the list? Email alejandro@poolin.com or create a pull request [here](https://github.com/taprootactivation). 
 Media enquiries: please reach out to alejandro@poolin.com or contact [@bitentrepreneur](https://twitter.com/bitentrepreneur) on Twitter.
