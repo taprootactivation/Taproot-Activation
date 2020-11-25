@@ -31,7 +31,10 @@ AntPool | Yes | BIP8 | TBD | | 11%
 Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0% 
 SigmaPool | Undecided | | | | 0.07%	
 NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | | | 1.09% |
-   | | | 
+ViaBTC   | <strong><em>NO ANSWER</em></strong> | | 
+Binance Pool | <strong><em>NO ANSWER</em></strong> | |
+
+
 
 Want to be included in the list? Email alejandro@poolin.com or create a pull request [here](https://github.com/taprootactivation). 
 Media enquiries: please reach out to alejandro@poolin.com or contact [@bitentrepreneur](https://twitter.com/bitentrepreneur) on Twitter.
