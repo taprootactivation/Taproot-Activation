@@ -29,8 +29,8 @@ BTC.com | Yes | Modern Soft Fork Activation | TBD | | 12.7%
 F2Pool | Yes | TBD | TBD | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 17.2%
 AntPool | Yes | BIP8 | TBD | | 11%
 Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0% 
-SigmaPool | Undecided | | | | 0.07 %	
-  | | | 
+SigmaPool | Undecided | | | | 0.07%	
+NovaBlock  | Yes | BIP8(false, 1y) | | | 1.09% |
    | | | 
 
 Want to be included in the list? Email alejandro@poolin.com or create a pull request [here](https://github.com/taprootactivation). 
