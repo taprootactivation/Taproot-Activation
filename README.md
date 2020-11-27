@@ -21,22 +21,22 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 
 ------
  
- Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 year)](https://btc.com/stats/pool?pool_mode=year)
+ Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month)
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- |
-[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 15.4%
-Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 3.8%
-BTC.com | Yes | Modern Soft Fork Activation | TBD | | 12.7%
-F2Pool | Yes | TBD | TBD | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 17.2%
-AntPool | Yes | BIP8 | TBD | | 11%
-Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0% 
-SigmaPool | Undecided | | | | 0.07%	
-NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 1.09% |
-ViaBTC   | <strong><em>NO ANSWER</em></strong> | | | | 6.38%
-Binance Pool | <strong><em>NO ANSWER</em></strong> | | | | 3.43%
-Huobi Pool | Yes | TBD | TBD| | 7.04%
-58COIN&1THash	| Yes | TBD | TBD| | 6.08%	
+[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 12.71 %	
+Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 2.60 %	
+BTC.com | Yes | Modern Soft Fork Activation | TBD | | 10.96 %	
+F2Pool | Yes | TBD | TBD | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 19.18 %	
+AntPool | Yes | BIP8 | TBD | | 10.43 %
+Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | N/A
+SigmaPool | Undecided | | | | 0.16 %	
+NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 1.04 %	 |
+ViaBTC   | <strong><em>NO ANSWER</em></strong> | | | | 7.85 %
+Binance Pool | <strong><em>NO ANSWER</em></strong> | | | | 9.56 %	
+Huobi Pool | Yes | TBD | TBD| | 10.36 %	
+58COIN&1THash	| Yes | TBD | TBD| | 6.36 %	
 
-**Total hashrate in support of Taproot:** 74.38% 
+**Total hashrate (1 month average) in support of Taproot:** 73.8%
 
 ------
 
