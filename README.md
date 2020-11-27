@@ -38,6 +38,8 @@ Huobi Pool | Yes | TBD | TBD| | 7.04%
 
 **Total hashrate in support of Taproot:** 74.38% 
 
+------
+
 Want to be included in the list? Email alejandro@poolin.com or create a pull request [here](https://github.com/taprootactivation). 
 Media enquiries: please reach out to alejandro@poolin.com or contact [@bitentrepreneur](https://twitter.com/bitentrepreneur) on Twitter.
  
