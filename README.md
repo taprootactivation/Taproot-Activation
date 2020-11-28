@@ -31,12 +31,12 @@ AntPool | Yes | BIP8 | TBD | | 10.43 %
 Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0.4%
 SigmaPool | Undecided | | | | 0.16 %	
 NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 1.04 %	 |
-ViaBTC   | <strong><em>NO ANSWER</em></strong> | | | | 7.85 %
+ViaBTC   | Yes | | | [Tweet](https://twitter.com/yhaiyang/status/1332402832075411456)| 7.85 %
 Binance Pool | <strong><em>NO ANSWER</em></strong> | | | | 9.56 %	
 Huobi Pool | Yes | TBD | TBD| | 10.36 %	
 58COIN&1THash	| Yes | TBD | TBD| | 6.36 %	
 
-**Total hashrate (1 month average) in support of Taproot:** 74.2%
+**Total hashrate (1 month average) in support of Taproot:** 82.05%
 
 ------
 
