@@ -32,7 +32,7 @@ F2Pool | Yes | TBD | TBD | [Pull Request](https://github.com/taprootactivation/T
 AntPool | Yes | BIP8 | TBD | | 10.43 %
 Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0.4%
 SigmaPool | Undecided | | | | 0.16 %	
-NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 1.04 %	 |
+NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/000000000000000000099e89321b5b7942d9b615393965a2c8990dc6c431b745) | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 1.04 %	 |
 ViaBTC   | Yes | | | [Tweet](https://twitter.com/yhaiyang/status/1332402832075411456)| 7.85 %
 Binance Pool | <strong><em>NO ANSWER</em></strong> | | | | 9.56 %	
 Huobi Pool | Yes | TBD | TBD| | 10.36 %	
