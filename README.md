@@ -19,6 +19,8 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 1. If so, which activation method they prefer
 1. If they want to insert a coinbase message in a block to announce their preference (even before the actual activation window opens)
 
+Note: TBD = To be decided
+
 ------
  
  Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month)
@@ -35,8 +37,9 @@ ViaBTC   | Yes | | | [Tweet](https://twitter.com/yhaiyang/status/133240283207541
 Binance Pool | <strong><em>NO ANSWER</em></strong> | | | | 9.56 %	
 Huobi Pool | Yes | TBD | TBD| | 10.36 %	
 58COIN&1THash	| Yes | TBD | TBD| | 6.36 %	
+SpiderPool	| Yes | TBD | TBD| | 0.55%	
 
-**Total hashrate (1 month average) in support of Taproot:** 82.05%
+**Total hashrate (1 month average) in support of Taproot:** 82.6%
 
 ------
 
