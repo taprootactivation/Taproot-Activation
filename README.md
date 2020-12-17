@@ -34,7 +34,7 @@ Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/stat
 SigmaPool | Undecided | | | | 0.16 %	
 NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/000000000000000000099e89321b5b7942d9b615393965a2c8990dc6c431b745) | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 1.5 %	 |
 ViaBTC   | Yes | | | [Tweet](https://twitter.com/yhaiyang/status/1332402832075411456)| 7.18 %
-Binance Pool | <strong><em>No Answer</em></strong> | | | | 11.23 %	
+Binance Pool | **No Answer** | | | | 11.23 %	
 Huobi Pool | Yes | TBD | TBD| | 9.71 %	
 58COIN&1THash	| Yes | TBD | TBD| | 5.86 %	
 SpiderPool	| Yes | TBD | TBD| | 0.52 %	
