@@ -38,8 +38,8 @@ Binance Pool | <strong><em>NO ANSWER</em></strong> | | | | 11.23 %
 Huobi Pool | Yes | TBD | TBD| | 9.71 %	
 58COIN&1THash	| Yes | TBD | TBD| | 5.86 %	
 SpiderPool	| Yes | TBD | TBD| | 0.52 %	
-Lubian.com | **No answer** | | | | 4.05 %
-BTC.TOP | **No Answe** | | | | 1.71 %
+Lubian.com | **No Answer** | | | | 4.05 %
+BTC.TOP | **No Answer** | | | | 1.71 %
 OKKONG | **No Answer** |  | | | .39 %
 TATMAS Pool | **No Answer** | | | | .39 %
 WAYI.CN | **No Answer** | | | | .3 %
