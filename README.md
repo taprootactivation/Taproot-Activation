@@ -25,31 +25,33 @@ Note: TBD = To be decided
 
  Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month)
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- |
-[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 12.49 %	
-Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 2.96 %	
-BTC.com | Yes | Modern Soft Fork Activation | TBD | | 9.87 %	
-F2Pool | Yes | TBD | TBD | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 19.28 %	
-AntPool | Yes | BIP8 | TBD | | 10.05 %
+[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 12.60 %	
+Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 3.37 %	
+BTC.com | Yes | Modern Soft Fork Activation | TBD | | 11.16 %	
+F2Pool | Yes | TBD | TBD | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 16.46 %	
+AntPool | Yes | BIP8 | TBD | | 9.75 %
 Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0.4%
-SigmaPool | Undecided | | | | 0.16 %	
-NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/000000000000000000099e89321b5b7942d9b615393965a2c8990dc6c431b745) | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 1.5 %	 |
-ViaBTC   | Yes | | | [Tweet](https://twitter.com/yhaiyang/status/1332402832075411456)| 7.18 %
-Binance Pool | Yes | | | | 11.23 %	
-Huobi Pool | Yes | TBD | TBD| | 9.71 %	
-58COIN&1THash	| Yes | TBD | TBD| | 5.86 %	
+SigmaPool | Undecided | | | | 0.20 %	
+NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/000000000000000000099e89321b5b7942d9b615393965a2c8990dc6c431b745) | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 0.63 %	 |
+ViaBTC   | Yes | | | [Tweet](https://twitter.com/yhaiyang/status/1332402832075411456)| 7.50 %
+Binance Pool | Yes | | | | 11.99 %	
+Huobi Pool | Yes | TBD | TBD| | 8.63 %	
+58COIN&1THash	| Yes | TBD | TBD| | 5.48 %	
 SpiderPool	| Yes | TBD | TBD| | 0.52 %	
-Lubian.com | **No Answer** | | | | 4.05 %
-BTC.TOP | **No Answer** | | | | 1.71 %
-OKKONG | **No Answer** |  | | | .39 %
-TATMAS Pool | **No Answer** | | | | .39 %
-WAYI.CN | **No Answer** | | | | .3 %
-OKExPool | **No Answer** | | | | .07 %
-Bitcoin.com | **No Answer** | | | | .05 %
+Lubian.com | **No Answer** | | | | 3.48 %
+BTC.TOP | **No Answer** | | | | 1.98 %
+OKKONG | **No Answer** |  | | | .34 %
+TATMAS Pool | **No Answer** | | | | .56 %
+WAYI.CN | **No Answer** | | | | .67 %
+OKExPool | **No Answer** | | | | .54 %
+Bitcoin.com | **No Answer** | | | | .02 %
 SoloCK | **No Answer** |  | | | .02%
-unknown | | | | | 2.3 %
+Foundry USA | **No Answer** |  | | | .56%
+SBI Crypto | **No Answer** |  | | | .79%
+unknown | | | | | 2.2 %
 
 
-**Total hashrate (1 month average) in support of Taproot:** 91.05 %
+**Total hashrate (1 month average) in support of Taproot:** 91.05 % (as of 2/2/2021)
 
 ------
 
