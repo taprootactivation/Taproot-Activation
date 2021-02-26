@@ -23,16 +23,16 @@ Note: TBD = To be decided
 
 ------
 
- Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month)
------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 12.60 %	
-Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 3.37 %	
-BTC.com | Yes | Modern Soft Fork Activation | TBD | [Github](https://github.com/taprootactivation/Taproot-Activation/issues/10) | 11.16 %	
-F2Pool | Yes | BIP8(false, 1y) | No | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 16.46 %	
-AntPool | Yes | BIP8 | TBD | | 9.75 %
-Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0.4%
-SigmaPool | Undecided | | | | 0.20 %	
-NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/000000000000000000099e89321b5b7942d9b615393965a2c8990dc6c431b745) | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 0.63 %	 |
+ Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month) | LOT = TRUE or FALSE
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 12.60 %	| LOT = FALSE |
+Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 3.37 %	| |
+BTC.com | Yes | Modern Soft Fork Activation | TBD | [Github](https://github.com/taprootactivation/Taproot-Activation/issues/10) | 11.16 %	| |
+F2Pool | Yes | BIP8(false, 1y) | No | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 16.46 %	| |
+AntPool | Yes | BIP8 | TBD | | 9.75 % | |
+Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0.4% | |
+SigmaPool | Undecided | | | | 0.20 %	| |
+NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/000000000000000000099e89321b5b7942d9b615393965a2c8990dc6c431b745) | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 0.63 % | LOT = FALSE |
 ViaBTC   | Yes | | | [Tweet](https://twitter.com/yhaiyang/status/1332402832075411456)| 7.50 %
 Binance Pool | Yes | | | | 11.99 %	
 Huobi Pool | Yes | TBD | TBD| | 8.63 %	
