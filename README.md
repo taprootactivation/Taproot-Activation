@@ -51,7 +51,7 @@ SBI Crypto | **No Answer** |  | | | .67%
 unknown | | | | | 1.58 %
 
 
-**Total hashrate (1 month average) in support of Taproot:** 88.69 % (as of 2nd of March, 2021)
+**Total hashrate (1 month average) in support of Taproot:** 89.07 % (as of 2nd of March, 2021)
 
 ------
 
