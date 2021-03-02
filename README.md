@@ -23,8 +23,8 @@ Note: TBD = To be decided
 
 ------
 
- Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month) | LOT = TRUE or FALSE
------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+ Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month) | LOT = TRUE or FALSE | EITHER
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 [Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 12.60 %	| LOT = FALSE |
 Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 3.37 %	| |
 BTC.com | Yes | Modern Soft Fork Activation | TBD | [Github](https://github.com/taprootactivation/Taproot-Activation/issues/10) | 11.16 %	| |
