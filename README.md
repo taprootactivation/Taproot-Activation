@@ -19,20 +19,22 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 1. If so, which activation method they prefer
 1. If they want to insert a coinbase message in a block to announce their preference (even before the actual activation window opens)
 
+**UPDATE: Under Speedy Trial, miners would have three months to signal support for Taproot after its code is shipped through Bitcoin Core, Bitcoin’s primary software version. If 90% of the blocks in a given time frame are not Taproot-supporting, then that means miners don’t support the upgrade and activation fails. If the threshold is reached, then activation takes place after a six-month “locked-in” period."** More info [here](https://www.coindesk.com/speedy-trial-taproot-activation-bitcoin-safety-net-uasf)
+
 Note: TBD = To be decided
 
 ------
 
- Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month) | LOT = TRUE or FALSE | EITHER
------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 13.70 %	| LOT = FALSE |
-Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 3.5 %	| |
-BTC.com | Yes | Modern Soft Fork Activation | TBD | [Github](https://github.com/taprootactivation/Taproot-Activation/issues/10) | 10.2 %	| |
-F2Pool | Yes | BIP8(false, 1y) | No | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 16.40 %	| | LOT = FALSE OR TRUE
-AntPool | Yes | BIP8 | TBD | | 10 % | |
-Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0.4% | |
-SigmaPool | Undecided | | | | 0.20 %	| |
-NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/000000000000000000099e89321b5b7942d9b615393965a2c8990dc6c431b745) | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 0.57 % | LOT = FALSE |
+ Mining Pool |   Taproot?     |  Activation | Coinbase Signal | Proof of Support | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month) | Speedy Trial
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+[Poolin](https://poolin.com) | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/0000000000000000000698859d225da3129461173d6a9c07b2849edc9da0a12d) | [Tweet](https://twitter.com/officialpoolin/status/1329021070918230017) | 13.70 %	| [YES](https://gist.github.com/michaelfolkson/92899f27f1ab30aa2ebee82314f8fe7f#gistcomment-3676723) |
+Slush Pool | Yes | BIP8 |  | [Tweet](https://twitter.com/slush_pool/status/1329051461100204032) | 3.5 %	|
+BTC.com | Yes | Modern Soft Fork Activation | TBD | [Github](https://github.com/taprootactivation/Taproot-Activation/issues/10) | 10.2 %	|
+F2Pool | Yes | BIP8(false, 1y) | No | [Pull Request](https://github.com/taprootactivation/Taproot-Activation/pull/4) | 16.40 %	| [YES](https://gist.github.com/michaelfolkson/92899f27f1ab30aa2ebee82314f8fe7f#gistcomment-3658382) |
+AntPool | Yes | BIP8 | TBD | | 10 % | 
+Luxor | Yes | BIP9 equivalent | | [Tweet](https://twitter.com/LuxorTechTeam/status/1329537408790978560) | 0.4% | 
+SigmaPool | Undecided | | | | 0.20 %	| 
+NovaBlock  | Yes | BIP9 equivalent, BIP8(false, 1y) | [taproot/bip9](https://explorer.poolin.com/block/000000000000000000099e89321b5b7942d9b615393965a2c8990dc6c431b745) | [Tweet](https://twitter.com/bitentrepreneur/status/1331570001552297984/likes) | 0.57 % | 
 ViaBTC   | Yes | | | [Tweet](https://twitter.com/yhaiyang/status/1332402832075411456)| 7.4 %
 Binance Pool | Yes | | | | 11.8 %	
 Huobi Pool | Yes | TBD | TBD| | 8.8 %	
