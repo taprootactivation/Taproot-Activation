@@ -19,6 +19,13 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 1. If so, which activation method they prefer
 1. If they want to insert a coinbase message in a block to announce their preference (even before the actual activation window opens)
 
+------
+
+**UPDATE: SPEEDY TRIAL ADDED TO BITCOIN CORE ACTIVATION PARAMETERS HERE: https://github.com/bitcoin/bitcoin/pull/21686**
+
+------
+
+
 **UPDATE: Under Speedy Trial, miners would have three months to signal support for Taproot after its code is shipped through Bitcoin Core, Bitcoin’s primary software version. If 90% of the blocks in a given time frame are not Taproot-supporting, then that means miners don’t support the upgrade and activation fails. If the threshold is reached, then activation takes place after a six-month “locked-in” period."** More info [here](https://www.coindesk.com/speedy-trial-taproot-activation-bitcoin-safety-net-uasf)
 
 Note: TBD = To be decided
