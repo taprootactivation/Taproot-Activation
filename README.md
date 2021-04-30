@@ -21,7 +21,8 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 
 ------
 
-**UPDATE: SPEEDY TRIAL ADDED TO BITCOIN CORE ACTIVATION PARAMETERS HERE: https://github.com/bitcoin/bitcoin/pull/21686**
+<span style="color:blue"> **UPDATE: SPEEDY TRIAL ADDED TO BITCOIN CORE ACTIVATION PARAMETERS HERE: https://github.com/bitcoin/bitcoin/pull/21686** </span>.
+
 
 ------
 
