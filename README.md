@@ -22,6 +22,10 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 1. If so, which activation method they prefer
 1. If they want to insert a coinbase message in a block to announce their preference (even before the actual activation window opens)
 
+
+**UPDATE (3, MAY 2021): 
+
+
 ------
 
 <span style="color:blue"> **[UPDATE: SPEEDY TRIAL ADDED TO BITCOIN CORE, CLICK FOR ACTIVATION PARAMETERS](https://github.com/bitcoin/bitcoin/pull/21686)** </span>.
@@ -38,35 +42,35 @@ Note: TBD = To be decided
 
  Mining Pool |   Taproot?    | SPEEDY TRIAL SIGNAL | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month) |
 ------------ | ------------- | ------------- | ------------- |
-[Poolin](https://poolin.com) | Yes | | 13.33 %	|  |
-Slush Pool | Yes | 🟩 | | 2.82 %		|
-BTC.com | Yes  | |  | 9.58 %		|
-F2Pool | Yes | 🟩 |  | 17.02 %	|  |
-AntPool | Yes | TBD | | 14.44 %	| 
-Luxor | Yes | |  | 0.4% | 
-SigmaPool | Undecided | | | 0.39 %	| 
-NovaBlock  | Yes |  |  | 0.57 % | 
-ViaBTC   | Yes | | | 7.4 %
-Binance Pool | Yes | | | 10.55 %	
-Huobi Pool | Yes |  TBD| | 7.44 %
-58COIN&1THash	| Yes |  TBD| | 5.5 %	
-SpiderPool	| Yes | TBD| | 0.53 %	
-Lubian.com | **No Answer** | | |  3 %
-BTC.TOP | **No Answer** | | |  1.93 %	
-OKKONG | **No Answer** |  | |  .24 %
-TATMAS Pool | **No Answer** | | | .64 %
-WAYI.CN | **No Answer** | | |  0.34 %	
-OKExPool | **No Answer** | | |  0.85 %	
-Bitcoin.com | **No Answer** | | |  .02 %
-SoloCK | **No Answer** |  | |  .02%
-Foundry USA | Yes | 🟩 | | 2.85 %	
-SBI Crypto | **No Answer** | | |  0.56 %	
-Rawpool | | | | 0.60 %	
-ArkPool | | | | 0.43 %	
-unknown | | | | 2.25 %	
+[Poolin](https://poolin.com) | Yes | | 13.33 %	|
+Slush Pool | Yes | 🟩 | 2.82 %	|
+BTC.com | Yes  | |  | 9.58 %	
+F2Pool | Yes | 🟩  | 17.02 %	
+AntPool | Yes | TBD | 14.44 %	
+Luxor | Yes | |   0.4% 
+SigmaPool | Undecided | |  0.39 %
+NovaBlock  | Yes |  |   0.57 % 
+ViaBTC   | Yes | |  7.4 %
+Binance Pool | Yes | |  10.55 %	
+Huobi Pool | Yes |  TBD|  7.44 %
+58COIN&1THash	| Yes |  TBD|  5.5 %	
+SpiderPool	| Yes | TBD|  0.53 %	
+Lubian.com | **No Answer** | |   3 %
+BTC.TOP | **No Answer** | |   1.93 %	
+OKKONG | **No Answer** |  |   .24 %
+TATMAS Pool | **No Answer** | |  .64 %
+WAYI.CN | **No Answer** | |   0.34 %	
+OKExPool | **No Answer** | |   0.85 %	
+Bitcoin.com | **No Answer** | |   .02 %
+SoloCK | **No Answer** |  |   .02%
+Foundry USA | Yes | 🟩 |  2.85 %	
+SBI Crypto | **No Answer** | |   0.56 %	
+Rawpool | | |  0.60 %	
+ArkPool | | |  0.43 %	
+unknown | | |  2.25 %	
 
 
-**Total hashrate (1 month average) in support of Taproot:** 89.07 % (as of 2nd of March, 2021)
+**Total hashrate (1 month average) SIGNALLING SPEEDY TRIAL for Taproot:** 22.69 % (as of 3 MAY, 2021)
 
 ------
 
