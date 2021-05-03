@@ -44,7 +44,7 @@ Note: TBD = To be decided
 ------------ | ------------- | ------------- | ------------- |
 [Poolin](https://poolin.com) | Yes | | 13.33 %	|
 Slush Pool | Yes | 🟩 | 2.82 %	|
-BTC.com | Yes  | |  | 9.58 %	
+BTC.com | Yes  | |  9.58 %	
 F2Pool | Yes | 🟩  | 17.02 %	
 AntPool | Yes | TBD | 14.44 %	
 Luxor | Yes | |   0.4% 
