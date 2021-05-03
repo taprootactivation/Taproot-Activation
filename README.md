@@ -23,8 +23,7 @@ More in-depth information on [Taproot activation proposals](https://en.bitcoin.i
 1. If they want to insert a coinbase message in a block to announce their preference (even before the actual activation window opens)
 
 
-**UPDATE (3, MAY 2021): 
-
+**UPDATE (3, MAY 2021) chart updated: 🟩 for pools that are signalling for Taproot. (90% of the blocks have to signa for Taproot to lock-in)**
 
 ------
 
