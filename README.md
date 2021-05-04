@@ -41,11 +41,11 @@ Note: TBD = To be decided
 
  Mining Pool |   Taproot?    | SPEEDY TRIAL SIGNAL | [Global Hashrate % (1 month](https://btc.com/stats/pool?pool_mode=month) |
 ------------ | ------------- | ------------- | ------------- |
-[Poolin](https://poolin.com) | Yes | | 13.33 %	|
+[Poolin](https://poolin.com) | Yes | 🟩 | 13.33 %	|
 Slush Pool | Yes | 🟩 | 2.82 %	|
 BTC.com | Yes  | |  9.58 %	
 F2Pool | Yes | 🟩  | 17.02 %	
-AntPool | Yes |  | 14.44 %	
+AntPool | Yes | 🟩 | 14.44 %	
 Luxor | Yes | |   0.4% 
 SigmaPool | Undecided | |  0.39 %
 NovaBlock  | Yes |  |   0.57 % 
