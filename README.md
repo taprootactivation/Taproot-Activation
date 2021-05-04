@@ -69,7 +69,7 @@ ArkPool | | |  0.43 %
 unknown | | |  2.25 %	
 
 
-**Total hashrate (1 month average) SIGNALLING SPEEDY TRIAL for Taproot:** 22.69 % (as of 3 MAY, 2021)
+**Total hashrate (1 month average) SIGNALLING SPEEDY TRIAL for Taproot:** 47.64 % (as of 4 MAY, 2021)
 (90% of the blocks have to signal for Taproot to lock-in)
 
 ------
