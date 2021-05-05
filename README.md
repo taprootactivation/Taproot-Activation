@@ -74,7 +74,7 @@ unknown | | |  2.25 %
 
 ------
 
-**Follow Taproot Block Signaling here: [https://taproot.watch/]**
+**Follow Taproot Block Signaling here: [TAPROOT.WATCH](https://taproot.watch/)**
 
 Want to be included in the list? Email <alejandro@poolin.com> or create a pull request [here](https://github.com/taprootactivation). 
 Media enquiries: please reach out to <alejandro@poolin.com> or contact **[@bitentrepreneur](https://twitter.com/bitentrepreneur) on Twitter.**
