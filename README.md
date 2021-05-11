@@ -52,7 +52,7 @@ NovaBlock  | Yes |  |   0.57 %
 ViaBTC   | Yes | |  7.4 %
 Binance Pool | Yes | |  10.55 %	
 Huobi Pool | Yes |  |  7.44 %
-58COIN&1THash	| Yes |  |  5.5 %	
+58COIN&1THash	| Yes | 🟩 |  5.5 %	
 SpiderPool	| Yes | |  0.53 %	
 Lubian.com | **No Answer** | |   3 %
 BTC.TOP | **No Answer** | |   1.93 %	
@@ -63,7 +63,7 @@ OKExPool | **No Answer** | |   0.85 %
 Bitcoin.com | **No Answer** | |   .02 %
 SoloCK | **No Answer** |  |   .02%
 Foundry USA | Yes | 🟩 |  2.85 %	
-SBI Crypto | **No Answer** | |   0.56 %	
+SBI Crypto | **No Answer** | 🟩 |   0.56 %	
 Rawpool | | |  0.60 %	
 ArkPool | | |  0.43 %	
 unknown | | |  2.25 %	
