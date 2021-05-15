@@ -49,7 +49,7 @@ AntPool | Yes | 🟩 | 14.44 %
 Luxor | Yes | |   0.4% 
 SigmaPool | Undecided | |  0.39 %
 NovaBlock  | Yes |  |   0.57 % 
-ViaBTC   | Yes | |  7.4 %
+ViaBTC   | Yes | 🟩 |  7.4 %
 Binance Pool | Yes | |  10.55 %	
 Huobi Pool | Yes |  |  7.44 %
 58COIN&1THash	| Yes | 🟩 |  5.5 %	
@@ -69,7 +69,7 @@ ArkPool | | |  0.43 %
 unknown | | |  2.25 %	
 
 
-**Total hashrate (1 month average) SIGNALLING SPEEDY TRIAL for Taproot:** 47.64 % (as of 4 MAY, 2021)
+**Total hashrate (1 month average) SIGNALLING SPEEDY TRIAL for Taproot:** 62.73%  % (as of 4 MAY, 2021)
 (90% of the blocks have to signal for Taproot to lock-in)
 
 ------
