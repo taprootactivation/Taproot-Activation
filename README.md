@@ -43,19 +43,19 @@ Note: TBD = To be decided
 ------------ | ------------- | ------------- | ------------- |
 [Poolin](https://poolin.com) | Yes | 🟩 | 13.33 %	|
 Slush Pool | Yes | 🟩 | 2.82 %	|
-BTC.com | Yes  | |  9.58 %	
+BTC.com | Yes  | 🟩 |  9.58 %	
 F2Pool | Yes | 🟩  | 17.02 %	
 AntPool | Yes | 🟩 | 14.44 %	
 Luxor | Yes | |   0.4% 
-SigmaPool | Undecided | |  0.39 %
-NovaBlock  | Yes |  |   0.57 % 
+SigmaPool | Undecided | 🟩 |  0.39 %
+NovaBlock  | Yes | |   0.57 % 
 ViaBTC   | Yes | 🟩 |  7.4 %
-Binance Pool | Yes | |  10.55 %	
-Huobi Pool | Yes |  |  7.44 %
+Binance Pool | Yes | 🟩 |  10.55 %	
+Huobi Pool | Yes | 🟩 |  7.44 %
 58COIN&1THash	| Yes | 🟩 |  5.5 %	
 SpiderPool	| Yes | |  0.53 %	
 Lubian.com | **No Answer** | |   3 %
-BTC.TOP | **No Answer** | |   1.93 %	
+BTC.TOP | **No Answer** | 🟩 |   1.93 %	
 OKKONG | **No Answer** |  |   .24 %
 TATMAS Pool | **No Answer** | |  .64 %
 WAYI.CN | **No Answer** | |   0.34 %	
