@@ -1,6 +1,8 @@
 <span style="color:blue"> **[UPDATE: SPEEDY TRIAL ADDED TO BITCOIN CORE, CLICK FOR ACTIVATION PARAMETERS](https://github.com/bitcoin/bitcoin/pull/21686)** </span>.
 
 
+## TAPROOT LOCKED-IN 🟩 THANKS MINERS :)
+
 ## Taproot is a proposed Bitcoin protocol upgrade that can be deployed as a forward-compatible soft fork. By combining the Schnorr signature scheme with MAST ([Merklized Alternative Script Tree](https://bitcoin.stackexchange.com/questions/99539/what-are-merklized-alternative-script-trees)) and a new scripting language called Tapscript, Taproot will expand Bitcoin’s smart contract flexibility, while offering more privacy by letting users mask complex smart contracts as a regular bitcoin transaction.
 More information can be found in this Bitcoin Magazine article by Aaron van Wirdum: [Taproot Is Coming: What It Is, And How It Will Benefit Bitcoin](https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
 
@@ -46,27 +48,27 @@ Slush Pool | Yes | 🟩 | 2.82 %	|
 BTC.com | Yes  | 🟩 |  9.58 %	
 F2Pool | Yes | 🟩  | 17.02 %	
 AntPool | Yes | 🟩 | 14.44 %	
-Luxor | Yes | |   0.4% 
+Luxor | Yes | 🟩 |   0.4% 
 SigmaPool | Undecided | 🟩 |  0.39 %
-NovaBlock  | Yes | |   0.57 % 
+NovaBlock  | Yes |🟩 |   0.57 % 
 ViaBTC   | Yes | 🟩 |  7.4 %
 Binance Pool | Yes | 🟩 |  10.55 %	
 Huobi Pool | Yes | 🟩 |  7.44 %
 58COIN&1THash	| Yes | 🟩 |  5.5 %	
-SpiderPool	| Yes | |  0.53 %	
-Lubian.com | **No Answer** | |   3 %
+SpiderPool	| Yes |🟩 |  0.53 %	
+Lubian.com | **No Answer** |🟩   3 %
 BTC.TOP | **No Answer** | 🟩 |   1.93 %	
-OKKONG | **No Answer** |  |   .24 %
-TATMAS Pool | **No Answer** | |  .64 %
-WAYI.CN | **No Answer** | |   0.34 %	
-OKExPool | **No Answer** | |   0.85 %	
-Bitcoin.com | **No Answer** | |   .02 %
-SoloCK | **No Answer** |  |   .02%
+OKKONG | **No Answer** |🟩  |   .24 %
+TATMAS Pool | **No Answer** |🟩 |  .64 %
+WAYI.CN | **No Answer** |🟩 |   0.34 %	
+OKExPool | **No Answer** |🟩 |   0.85 %	
+Bitcoin.com | **No Answer** |🟩 |   .02 %
+SoloCK | **No Answer** |🟩  |   .02%
 Foundry USA | Yes | 🟩 |  2.85 %	
 SBI Crypto | **No Answer** | 🟩 |   0.56 %	
-Rawpool | | |  0.60 %	
-ArkPool | | |  0.43 %	
-unknown | | |  2.25 %	
+Rawpool | | 🟩|  0.60 %	
+ArkPool | |🟩 |  0.43 %	
+unknown | | 🟩|  2.25 %	
 
 
 **Total hashrate (1 month average) SIGNALLING SPEEDY TRIAL for Taproot:** 62.73%  % (as of 4 MAY, 2021)
