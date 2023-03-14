@@ -3,6 +3,8 @@
 
 ## TAPROOT LOCKED-IN 🟩 THANKS MINERS :)
 
+connect with me on twitter: https://twitter.com/bitentrepreneur
+
 ## Taproot is a proposed Bitcoin protocol upgrade that can be deployed as a forward-compatible soft fork. By combining the Schnorr signature scheme with MAST ([Merklized Alternative Script Tree](https://bitcoin.stackexchange.com/questions/99539/what-are-merklized-alternative-script-trees)) and a new scripting language called Tapscript, Taproot will expand Bitcoin’s smart contract flexibility, while offering more privacy by letting users mask complex smart contracts as a regular bitcoin transaction.
 More information can be found in this Bitcoin Magazine article by Aaron van Wirdum: [Taproot Is Coming: What It Is, And How It Will Benefit Bitcoin](https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
 
