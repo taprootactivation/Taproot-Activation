@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taproot Activation — Hashrate Timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#FAFAF8;color:#1A1A1A;min-height:100vh;overflow-x:hidden}
+a{text-decoration:none}
+
+/* HEADER */
+header{display:flex;align-items:center;justify-content:space-between;padding:24px 48px;border-bottom:1px solid #E8E6E0;background:#fff}
+.logo-area{display:flex;align-items:center;gap:14px}
+.site-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:600;color:#1A1A1A}
+.site-subtitle{font-size:12px;color:#AAA;margin-top:2px;letter-spacing:0.02em}
+.credit{font-size:12px;color:#AAA;text-align:right;line-height:1.6}
+.credit a{color:#F7931A;font-weight:500}
+
+/* LAYOUT */
+main{display:grid;grid-template-columns:1fr 360px;min-height:calc(100vh - 73px)}
+
+/* LEFT: GAUGE */
+.left{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 48px 32px;gap:0}
+.gauge-sup{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#AAA;margin-bottom:28px}
+
+.gauge-wrap{position:relative;width:300px;height:300px}
+#gaugesvg{width:100%;height:100%;transform:rotate(-222deg)}
+
+.gauge-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.gauge-pct{font-family:'Playfair Display',serif;font-size:62px;font-weight:600;line-height:1;letter-spacing:-2px;color:#1A1A1A}
+.gauge-unit{font-size:18px;color:#AAA;font-weight:300}
+.gauge-sub{font-size:12px;color:#AAA;margin-top:4px}
+.gauge-lock{font-size:12px;font-weight:500;color:#2D6A30;margin-top:6px;opacity:0;transition:opacity 0.6s;letter-spacing:0.04em}
+
+/* EVENT INFO */
+.event-info{margin-top:36px;text-align:center;min-height:72px}
+.ev-date{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#AAA;margin-bottom:7px}
+.ev-label{font-family:'Playfair Display',serif;font-size:20px;color:#1A1A1A;line-height:1.3}
+.ev-pools{font-size:13px;color:#AAA;margin-top:6px;line-height:1.5;min-height:18px}
+.ev-milestone{display:inline-block;background:#FFF4E6;color:#C05E00;font-size:11px;font-weight:500;padding:3px 11px;border-radius:20px;margin-top:10px;letter-spacing:0.04em;opacity:0;transform:translateY(3px);transition:all 0.4s}
+.ev-milestone.show{opacity:1;transform:translateY(0)}
+
+/* LOCKED BANNER */
+.lock-banner{margin:0 48px 0;padding:16px 20px;background:#EDF7EE;border-radius:8px;border:1px solid #B8DFB9;text-align:center;opacity:0;transition:opacity 0.6s;max-height:0;overflow:hidden;transition:all 0.6s}
+.lock-banner.show{opacity:1;max-height:100px;margin-bottom:0}
+.lock-banner h3{font-family:'Playfair Display',serif;font-size:18px;color:#2D6A30;margin-bottom:3px}
+.lock-banner p{font-size:12px;color:#5A8A5C}
+
+/* SCRUBBER */
+.scrub-section{padding:28px 48px 0;width:100%}
+.scrub-row{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.play-btn{width:34px;height:34px;border:1px solid #E0DED8;background:#fff;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color 0.2s}
+.play-btn:hover{border-color:#F7931A}
+input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:2px;background:#E8E6E0;outline:none;border-radius:2px;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:#F7931A;border:2px solid #fff;box-shadow:0 0 0 1px #F7931A}
+.phase-row{display:flex;justify-content:space-between;font-size:10px;color:#CCC;letter-spacing:0.07em;text-transform:uppercase;padding:0 2px}
+
+/* RIGHT: FEED */
+.right{background:#fff;border-left:1px solid #E8E6E0;display:flex;flex-direction:column}
+.feed-head{padding:24px 24px 16px;border-bottom:1px solid #F2F0EC}
+.feed-head-label{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#AAA}
+.feed-list{flex:1;overflow-y:auto;padding:0 24px 24px}
+.feed-list::-webkit-scrollbar{width:4px}
+.feed-list::-webkit-scrollbar-track{background:transparent}
+.feed-list::-webkit-scrollbar-thumb{background:#E8E6E0;border-radius:2px}
+
+.fi{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-bottom:1px solid #F5F3EE;opacity:0.2;transition:opacity 0.5s}
+.fi.on{opacity:1}
+.fi-dot{width:7px;height:7px;border-radius:50%;background:#DDD;margin-top:5px;flex-shrink:0;transition:background 0.4s}
+.fi.on .fi-dot{background:#F7931A}
+.fi.on.ms .fi-dot{background:#2D6A30}
+.fi-body{flex:1;min-width:0}
+.fi-date{font-size:10px;color:#BBB;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:2px}
+.fi-name{font-size:13px;color:#1A1A1A;line-height:1.4}
+.fi-pools{font-size:11px;color:#AAA;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fi-pct{font-size:12px;color:#F7931A;font-weight:500;flex-shrink:0;padding-left:8px;opacity:0;transition:opacity 0.5s;margin-top:3px}
+.fi.on .fi-pct{opacity:1}
+.fi.on.ms .fi-pct{color:#2D6A30}
+
+/* PHASE DIVIDER in feed */
+.fi-phase{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#F7931A;padding:14px 0 2px;font-weight:500;opacity:0;transition:opacity 0.5s}
+.fi-phase.on{opacity:1}
+
+@media(max-width:800px){
+  main{grid-template-columns:1fr}
+  header{padding:16px 20px}
+  .left{padding:32px 20px 24px}
+  .gauge-wrap{width:260px;height:260px}
+  .gauge-pct{font-size:52px}
+  .scrub-section{padding:20px 20px 0}
+  .right{border-left:none;border-top:1px solid #E8E6E0;max-height:360px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-area">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <circle cx="19" cy="19" r="19" fill="#F7931A"/>
+      <path d="M25.8 16.4c.3-2.1-1.3-3.2-3.5-3.9l.7-2.9-1.7-.4-.7 2.8c-.5-.1-.9-.2-1.4-.3l.7-2.8-1.7-.4-.7 2.9c-.4-.1-.7-.2-1.1-.2h0l-2.3-.6-.5 1.8s1.3.3 1.3.3c.7.2.8.6.8 1l-.9 3.4h.2l-.2 0-1.2 4.7c-.1.2-.3.5-.9.4 0 0-1.3-.3-1.3-.3l-.9 1.9 2.2.5c.4.1.9.2 1.3.3l-.7 2.9 1.7.4.7-2.9c.5.1.9.2 1.4.3l-.7 2.8 1.7.4.7-2.9c3.1.6 5.4.3 6.3-2.4.8-2.1-.1-3.3-1.6-4.1 1.2-.3 2-1 2.2-2.6zm-4 5.6c-.5 2.1-4.1.9-5.3.6l.9-3.7c1.2.3 5 .9 4.4 3.1zm.5-5.7c-.5 1.9-3.5.9-4.4.7l.9-3.3c.9.2 4.1.7 3.5 2.6z" fill="white"/>
+    </svg>
+    <div>
+      <div class="site-title">Taproot Activation</div>
+      <div class="site-subtitle">Mining pool support campaign · 2020–2021</div>
+    </div>
+  </div>
+  <div class="credit">
+    Coordinated by <a href="https://twitter.com/bitentrepreneur" target="_blank">@bitentrepreneur</a><br>
+    <a href="https://taprootactivation.com" target="_blank">taprootactivation.com</a>
+  </div>
+</header>
+
+<main>
+  <div class="left">
+    <div class="gauge-sup">Global hashrate supporting Taproot</div>
+
+    <div class="gauge-wrap">
+      <svg id="gaugesvg" viewBox="0 0 300 300">
+        <!-- Track -->
+        <circle cx="150" cy="150" r="120" fill="none" stroke="#F0EEE8" stroke-width="13"
+          stroke-dasharray="659 192" stroke-linecap="round"/>
+        <!-- 90% tick -->
+        <circle cx="150" cy="150" r="120" fill="none" stroke="#F7931A" stroke-width="2"
+          id="tickMark" stroke-dasharray="2 849" stroke-dashoffset="-590" opacity="0.45"/>
+        <!-- Progress -->
+        <circle cx="150" cy="150" r="120" fill="none" stroke="#F7931A" stroke-width="13"
+          id="gaugeArc" stroke-dasharray="0 851" stroke-linecap="round"/>
+      </svg>
+      <div class="gauge-center">
+        <div style="margin-bottom:6px">
+          <svg width="22" height="22" viewBox="0 0 38 38">
+            <circle cx="19" cy="19" r="19" fill="#F7931A" opacity="0.12"/>
+            <path d="M25.8 16.4c.3-2.1-1.3-3.2-3.5-3.9l.7-2.9-1.7-.4-.7 2.8c-.5-.1-.9-.2-1.4-.3l.7-2.8-1.7-.4-.7 2.9c-.4-.1-.7-.2-1.1-.2h0l-2.3-.6-.5 1.8s1.3.3 1.3.3c.7.2.8.6.8 1l-.9 3.4h.2l-.2 0-1.2 4.7c-.1.2-.3.5-.9.4 0 0-1.3-.3-1.3-.3l-.9 1.9 2.2.5c.4.1.9.2 1.3.3l-.7 2.9 1.7.4.7-2.9c.5.1.9.2 1.4.3l-.7 2.8 1.7.4.7-2.9c3.1.6 5.4.3 6.3-2.4.8-2.1-.1-3.3-1.6-4.1 1.2-.3 2-1 2.2-2.6zm-4 5.6c-.5 2.1-4.1.9-5.3.6l.9-3.7c1.2.3 5 .9 4.4 3.1zm.5-5.7c-.5 1.9-3.5.9-4.4.7l.9-3.3c.9.2 4.1.7 3.5 2.6z" fill="#F7931A"/>
+          </svg>
+        </div>
+        <div class="gauge-pct"><span id="pctNum">0</span><span class="gauge-unit">%</span></div>
+        <div class="gauge-sub">of network hashrate</div>
+        <div class="gauge-lock" id="gaugeLock">Locked in &#10003;</div>
+      </div>
+    </div>
+
+    <div class="event-info">
+      <div class="ev-date" id="evDate">—</div>
+      <div class="ev-label" id="evLabel">Beginning outreach</div>
+      <div class="ev-pools" id="evPools"></div>
+      <div class="ev-milestone" id="evMs"></div>
+    </div>
+
+    <div class="lock-banner" id="lockBanner">
+      <h3>Taproot Locked In &#127809;</h3>
+      <p>Block 687,285 &middot; June 12, 2021 &nbsp;&rarr;&nbsp; Activated at Block 709,632 &middot; November 14, 2021</p>
+    </div>
+
+    <div class="scrub-section">
+      <div class="scrub-row">
+        <button class="play-btn" id="playBtn" onclick="togglePlay()">
+          <svg id="icoPlay" width="11" height="13" viewBox="0 0 11 13"><path d="M0 0.5l11 6-11 6V0.5z" fill="#1A1A1A"/></svg>
+          <svg id="icoPause" width="11" height="13" viewBox="0 0 11 13" style="display:none"><rect x="0" y="0.5" width="3.5" height="12" rx="1" fill="#1A1A1A"/><rect x="6.5" y="0.5" width="3.5" height="12" rx="1" fill="#1A1A1A"/></svg>
+        </button>
+        <input type="range" id="scrubber" min="0" max="100" value="0" step="0.2" oninput="onScrub(this.value)">
+      </div>
+      <div class="phase-row">
+        <span>Nov 2020</span>
+        <span>&larr; Outreach &rarr;</span>
+        <span>Speedy Trial</span>
+        <span>Activated</span>
+        <span>Nov 2021</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="feed-head">
+      <div class="feed-head-label">Pool confirmations</div>
+    </div>
+    <div class="feed-list" id="feedList"></div>
+  </div>
+</main>
+
+<script>
+const C = 2 * Math.PI * 120;
+const ARC_DEG = 264;
+const MAX_ARC = C * (ARC_DEG / 360);
+
+const events = [
+  { date:"Nov 13, 2020", label:"Campaign launches", pools:["Poolin","Slush Pool","BTC.com","AntPool","Huobi Pool"], hashrate:47.6, phase:1 },
+  { date:"Nov 19, 2020", label:"F2Pool joins via GitHub PR", pools:["F2Pool"], hashrate:64.6, phase:1, note:"Largest pool · 17% of hashrate" },
+  { date:"Nov 27, 2020", label:"ViaBTC & Luxor join", pools:["ViaBTC","Luxor"], hashrate:72.5, phase:1 },
+  { date:"Dec 8, 2020",  label:"SpiderPool joins", pools:["SpiderPool"], hashrate:73.2, phase:1 },
+  { date:"Dec 17, 2020", label:"More pools added", pools:["58COIN & 1THash","SBI Crypto"], hashrate:76.5, phase:1 },
+  { date:"Dec 27, 2020", label:"Binance Pool confirms", pools:["Binance Pool"], hashrate:83.1, phase:1, note:'"yes ;)"' },
+  { date:"Feb 2, 2021",  label:"Foundry USA & NovaBlock", pools:["Foundry USA","NovaBlock"], hashrate:86.5, phase:1 },
+  { date:"Apr 30, 2021", label:"Speedy Trial parameters set", pools:[], hashrate:86.5, ms:"Activation code shipped in Bitcoin Core", phase:2 },
+  { date:"May 3, 2021",  label:"On-chain signalling begins", pools:["SigmaPool","Rawpool","ArkPool"], hashrate:89.5, ms:"Speedy Trial window opens", phase:2 },
+  { date:"May 5–17, 2021",label:"Remaining pools signal", pools:["Lubian.com","BTC.TOP","OKKONG","TATMAS","WAYI.CN","OKExPool","Bitcoin.com","SoloCK"], hashrate:97.0, phase:2 },
+  { date:"Jun 12, 2021", label:"Taproot locked in", pools:[], hashrate:100, ms:"Block 687,285 — threshold crossed", phase:3, locked:true },
+  { date:"Nov 14, 2021", label:"Taproot activated", pools:[], hashrate:100, ms:"Block 709,632 — Bitcoin upgraded", phase:3, activated:true }
+];
+
+function buildFeed() {
+  const fl = document.getElementById('feedList');
+  let lastPhase = 0;
+  events.forEach((ev, i) => {
+    if (ev.phase !== lastPhase && ev.phase > 1) {
+      const d = document.createElement('div');
+      d.className = 'fi-phase';
+      d.id = 'phase-' + i;
+      d.textContent = ev.phase === 2 ? '— Speedy Trial Phase —' : '— Activated —';
+      fl.appendChild(d);
+    }
+    lastPhase = ev.phase;
+
+    const el = document.createElement('div');
+    el.className = 'fi' + (ev.ms ? ' ms' : '');
+    el.id = 'fi-' + i;
+    const poolStr = ev.pools.length > 0
+      ? ev.pools.slice(0,3).join(', ') + (ev.pools.length > 3 ? ' +' + (ev.pools.length-3) + ' more' : '')
+      : (ev.note || '');
+    el.innerHTML =
+      '<div class="fi-dot"></div>' +
+      '<div class="fi-body">' +
+        '<div class="fi-date">' + ev.date + '</div>' +
+        '<div class="fi-name">' + ev.label + '</div>' +
+        (poolStr ? '<div class="fi-pools">' + poolStr + '</div>' : '') +
+      '</div>' +
+      '<div class="fi-pct">' + ev.hashrate.toFixed(1) + '%</div>';
+    fl.appendChild(el);
+  });
+}
+buildFeed();
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+function getHashrate(p) {
+  const n = events.length - 1;
+  const i = Math.min(Math.floor(p * n), n - 1);
+  const f = (p * n) - i;
+  return lerp(events[i].hashrate, events[Math.min(i+1,n)].hashrate, f);
+}
+
+function getEventIdx(p) {
+  return Math.min(Math.floor(p * (events.length - 1)), events.length - 1);
+}
+
+let lastEvIdx = -1;
+
+function render(p) {
+  const hr = getHashrate(p);
+  const ei = getEventIdx(p);
+  const ev = events[ei];
+
+  const frac = hr / 100;
+  const dash = frac * MAX_ARC;
+  const arc = document.getElementById('gaugeArc');
+  arc.setAttribute('stroke-dasharray', dash.toFixed(1) + ' ' + (C - dash).toFixed(1));
+  arc.style.stroke = hr >= 92 ? '#2D6A30' : '#F7931A';
+  arc.style.transition = 'stroke-dasharray 0.7s cubic-bezier(.4,0,.2,1), stroke 0.5s';
+
+  document.getElementById('pctNum').textContent = Math.round(hr);
+
+  const lockEl = document.getElementById('gaugeLock');
+  lockEl.style.opacity = hr >= 90 ? '1' : '0';
+  lockEl.style.color = hr >= 92 ? '#2D6A30' : '#C05E00';
+  lockEl.textContent = hr >= 92 ? 'Locked in \u2713' : '90% threshold met';
+
+  if (ei !== lastEvIdx) {
+    lastEvIdx = ei;
+    document.getElementById('evDate').textContent = ev.date;
+    document.getElementById('evLabel').textContent = ev.label;
+
+    const poolTxt = ev.pools.length
+      ? ev.pools.join(' \u00B7 ')
+      : (ev.note || '');
+    document.getElementById('evPools').textContent = poolTxt;
+
+    const msEl = document.getElementById('evMs');
+    if (ev.ms) { msEl.textContent = ev.ms; msEl.classList.add('show'); }
+    else { msEl.classList.remove('show'); }
+
+    const banner = document.getElementById('lockBanner');
+    if (ei >= 10) banner.classList.add('show');
+    else banner.classList.remove('show');
+
+    events.forEach((_, i) => {
+      const el = document.getElementById('fi-' + i);
+      if (!el) return;
+      if (i <= ei) el.classList.add('on'); else el.classList.remove('on');
+      const ph = document.getElementById('phase-' + i);
+      if (ph) { if (i <= ei) ph.classList.add('on'); else ph.classList.remove('on'); }
+    });
+
+    const active = document.getElementById('fi-' + ei);
+    if (active) active.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  }
+
+  document.getElementById('scrubber').value = (p * 100).toFixed(1);
+}
+
+let prog = 0, playing = false, rafId = null, t0 = null;
+const DUR = 30000;
+
+function step(ts) {
+  if (!t0) t0 = ts;
+  prog = Math.min((ts - t0) / DUR, 1);
+  render(prog);
+  if (prog < 1) { rafId = requestAnimationFrame(step); }
+  else { playing = false; setIcon(false); }
+}
+
+function setIcon(p) {
+  document.getElementById('icoPlay').style.display = p ? 'none' : 'block';
+  document.getElementById('icoPause').style.display = p ? 'block' : 'none';
+}
+
+function togglePlay() {
+  if (playing) {
+    cancelAnimationFrame(rafId);
+    playing = false; t0 = null; setIcon(false);
+  } else {
+    if (prog >= 1) prog = 0;
+    playing = true; t0 = null; setIcon(true);
+    rafId = requestAnimationFrame(step);
+  }
+}
+
+function onScrub(v) {
+  cancelAnimationFrame(rafId);
+  playing = false; t0 = null; setIcon(false);
+  prog = v / 100;
+  lastEvIdx = -1;
+  render(prog);
+}
+
+render(0);
+setTimeout(() => {
+  playing = true; setIcon(true);
+  rafId = requestAnimationFrame(step);
+}, 900);
+</script>
+</body>
+</html>
