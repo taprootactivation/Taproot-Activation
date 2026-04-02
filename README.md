@@ -1,3 +1,5 @@
+**[View the Hashrate Activation Timeline →](https://taprootactivation.com/timeline)**
+
 <span style="color:blue"> **[UPDATE: SPEEDY TRIAL ADDED TO BITCOIN CORE, CLICK FOR ACTIVATION PARAMETERS](https://github.com/bitcoin/bitcoin/pull/21686)** </span>.
 
 
