@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taproot Activation — Hashrate Timeline</title>
+<title>Taproot Activation Hashrate Timeline</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -144,7 +144,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
     </div>
 
     <div class="event-info">
-      <div class="ev-date" id="evDate">—</div>
+      <div class="ev-date" id="evDate"></div>
       <div class="ev-label" id="evLabel">Beginning outreach</div>
       <div class="ev-pools" id="evPools"></div>
       <div class="ev-milestone" id="evMs"></div>
@@ -187,7 +187,8 @@ const ARC_DEG = 264;
 const MAX_ARC = C * (ARC_DEG / 360);
 
 const events = [
-  { date:"Nov 13, 2020", label:"Campaign launches", pools:["Poolin","Slush Pool","BTC.com","AntPool","Huobi Pool"], hashrate:47.6, phase:1 },
+  { date:"Oct–Nov 2020", label:"Outreach begins before any public confirmation", pools:[], hashrate:0, phase:1, note:"Weeks of emails, DMs and calls to mining pools" },
+  { date:"Nov 13, 2020", label:"taprootactivation.com launches", pools:["Poolin","Slush Pool","BTC.com","AntPool","Huobi Pool"], hashrate:47.6, phase:1, note:"First confirmations published outreach had already been underway for weeks" },
   { date:"Nov 19, 2020", label:"F2Pool joins via GitHub PR", pools:["F2Pool"], hashrate:64.6, phase:1, note:"Largest pool · 17% of hashrate" },
   { date:"Nov 27, 2020", label:"ViaBTC & Luxor join", pools:["ViaBTC","Luxor"], hashrate:72.5, phase:1 },
   { date:"Dec 8, 2020",  label:"SpiderPool joins", pools:["SpiderPool"], hashrate:73.2, phase:1 },
@@ -197,8 +198,8 @@ const events = [
   { date:"Apr 30, 2021", label:"Speedy Trial parameters set", pools:[], hashrate:86.5, ms:"Activation code shipped in Bitcoin Core", phase:2 },
   { date:"May 3, 2021",  label:"On-chain signalling begins", pools:["SigmaPool","Rawpool","ArkPool"], hashrate:89.5, ms:"Speedy Trial window opens", phase:2 },
   { date:"May 5–17, 2021",label:"Remaining pools signal", pools:["Lubian.com","BTC.TOP","OKKONG","TATMAS","WAYI.CN","OKExPool","Bitcoin.com","SoloCK"], hashrate:97.0, phase:2 },
-  { date:"Jun 12, 2021", label:"Taproot locked in", pools:[], hashrate:100, ms:"Block 687,285 — threshold crossed", phase:3, locked:true },
-  { date:"Nov 14, 2021", label:"Taproot activated", pools:[], hashrate:100, ms:"Block 709,632 — Bitcoin upgraded", phase:3, activated:true }
+  { date:"Jun 12, 2021", label:"Taproot locked in", pools:[], hashrate:100, ms:"Block 687,285 threshold crossed", phase:3, locked:true },
+  { date:"Nov 14, 2021", label:"Taproot activated", pools:[], hashrate:100, ms:"Block 709,632 Bitcoin upgraded", phase:3, activated:true }
 ];
 
 function buildFeed() {
@@ -209,7 +210,7 @@ function buildFeed() {
       const d = document.createElement('div');
       d.className = 'fi-phase';
       d.id = 'phase-' + i;
-      d.textContent = ev.phase === 2 ? '— Speedy Trial Phase —' : '— Activated —';
+      d.textContent = ev.phase === 2 ? 'Speedy Trial Phase' : 'Activated';
       fl.appendChild(d);
     }
     lastPhase = ev.phase;
@@ -301,7 +302,7 @@ function render(p) {
 }
 
 let prog = 0, playing = false, rafId = null, t0 = null;
-const DUR = 30000;
+const DUR = 50000;
 
 function step(ts) {
   if (!t0) t0 = ts;
@@ -335,11 +336,14 @@ function onScrub(v) {
   render(prog);
 }
 
+prog = 0;
+lastEvIdx = -1;
 render(0);
 setTimeout(() => {
   playing = true; setIcon(true);
+  t0 = null;
   rafId = requestAnimationFrame(step);
-}, 900);
+}, 1200);
 </script>
 
 <!-- EDUCATION SECTIONS -->
@@ -389,7 +393,7 @@ setTimeout(() => {
   .edu-inner{padding:48px 24px}
   .edu-h2{font-size:26px}
   .edu-grid{grid-template-columns:1fr}
-  .timeline-explainer{grid-template-columns:1fr}
+  .timeline-explainer{grid-template-columns:1fr !important}
   .te-step{border-right:none;border-bottom:1px solid #E8E6E0}
   .te-step:last-child{border-bottom:none}
   .glossary{grid-template-columns:1fr}
@@ -404,7 +408,6 @@ setTimeout(() => {
   <div class="edu-inner">
     <div class="edu-eyebrow">How Bitcoin upgrades</div>
     <h2 class="edu-h2">What is a Miner Activated Soft Fork?</h2>
-    <p class="edu-lead">Bitcoin has no CEO, no board, no central authority that can push an update. Changing the protocol requires broad consensus — and one of the most established ways to achieve that is through miner signalling, where the people who produce Bitcoin's blocks indicate whether they're ready to enforce new rules.</p>
 
     <div class="edu-grid">
       <div class="edu-card">
@@ -412,7 +415,7 @@ setTimeout(() => {
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1L2 5v8l7 4 7-4V5L9 1z" stroke="#F7931A" stroke-width="1.5" stroke-linejoin="round"/></svg>
         </div>
         <h3>What is a soft fork?</h3>
-        <p>A soft fork is a <strong>backward-compatible</strong> rule change. Nodes that haven't upgraded still accept blocks produced under the new rules — they just don't enforce them. This means the network doesn't split as long as a majority of miners adopt the new rules. Hard forks, by contrast, require everyone to upgrade or the chain diverges.</p>
+        <p>A soft fork is a <strong>backward-compatible</strong> rule change. Nodes that haven't upgraded still accept blocks produced under the new rules they just don't enforce them. This means the network doesn't split as long as a majority of miners adopt the new rules. Hard forks, by contrast, require everyone to upgrade or the chain diverges.</p>
       </div>
       <div class="edu-card">
         <div class="edu-card-icon">
@@ -426,36 +429,42 @@ setTimeout(() => {
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#F7931A" stroke-width="1.5"/><path d="M9 5v4l3 2" stroke="#F7931A" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
         <h3>Why 90%? Why not 51%?</h3>
-        <p>A simple majority isn't enough — if 49% of miners haven't upgraded, they could produce blocks that are valid under the old rules but invalid under the new ones, causing orphaned blocks and instability. The <strong>90% threshold</strong> used for Taproot (via Speedy Trial) gives strong confidence that the new rules are being enforced by enough of the network to make non-signalling blocks economically irrelevant.</p>
+        <p>A simple majority isn't enough if 49% of miners haven't upgraded, they could produce blocks that are valid under the old rules but invalid under the new ones, causing orphaned blocks and instability. The <strong>90% threshold</strong> used for Taproot (via Speedy Trial) gives strong confidence that the new rules are being enforced by enough of the network to make non-signalling blocks economically irrelevant.</p>
       </div>
       <div class="edu-card">
         <div class="edu-card-icon">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3l6 6-6 6" stroke="#F7931A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3>Lock-in vs Activation</h3>
-        <p>These are two separate events. <strong>Lock-in</strong> happens when the threshold is crossed — the upgrade is committed and cannot be stopped regardless of what miners do next. <strong>Activation</strong> happens later (for Taproot, ~6 months after lock-in) when the new rules actually come into effect. This delay gives everyone time to upgrade their nodes.</p>
+        <p>These are two separate events. <strong>Lock-in</strong> happens when the threshold is crossed the upgrade is committed and cannot be stopped regardless of what miners do next. <strong>Activation</strong> happens later (for Taproot, ~6 months after lock-in) when the new rules actually come into effect. This delay gives everyone time to upgrade their nodes.</p>
       </div>
     </div>
 
-    <div class="edu-eyebrow" style="margin-bottom:16px">The three phases of Taproot's activation</div>
-    <div class="timeline-explainer">
+    <div class="edu-eyebrow" style="margin-bottom:16px">The four phases of Taproot's activation</div>
+    <div class="timeline-explainer" style="grid-template-columns:1fr 1fr 1fr 1fr">
       <div class="te-step">
-        <div class="te-tag orange">Phase 1 — Nov 2020 to Apr 2021</div>
+        <div class="te-tag blue">Phase 1 Oct–Nov 2020</div>
         <div class="te-num">01</div>
-        <div class="te-title">Outreach & consensus building</div>
-        <div class="te-desc">Before any signalling mechanism was set, mining pools were contacted individually to gauge support. This site — taprootactivation.com — was built to coordinate and publicly track responses. Each "yes" was a diplomatic commitment, not yet an on-chain action.</div>
+        <div class="te-title">Silent outreach</div>
+        <div class="te-desc">Weeks before anything was public, the world's largest mining pools were being contacted individually emails, DMs, calls. No website, no tracker, no announcement. Just the groundwork of building consensus before asking anyone to commit publicly.</div>
       </div>
       <div class="te-step">
-        <div class="te-tag orange">Phase 2 — May to Jun 2021</div>
+        <div class="te-tag orange">Phase 2 Nov 2020 to Apr 2021</div>
         <div class="te-num">02</div>
-        <div class="te-title">Speedy Trial signalling</div>
-        <div class="te-desc">Speedy Trial (BIP8 with a compressed window) was merged into Bitcoin Core in May 2021. Miners had a 3-month window to signal support in their blocks. If 90% of blocks in any 2,016-block period signalled during this window, Taproot would lock in. The threshold was crossed on June 12, 2021 — just weeks into the window.</div>
+        <div class="te-title">Public tracking</div>
+        <div class="te-desc">Once enough pools had confirmed support, taprootactivation.com launched to make the process transparent. Each response was recorded publicly. Pools could submit their confirmation via GitHub PR. The site created accountability and social momentum a pool yet to respond was visible to everyone.</div>
       </div>
       <div class="te-step">
-        <div class="te-tag green">Phase 3 — Nov 2021</div>
+        <div class="te-tag orange">Phase 3 May to Jun 2021</div>
         <div class="te-num">03</div>
+        <div class="te-title">Speedy Trial signalling</div>
+        <div class="te-desc">Speedy Trial was merged into Bitcoin Core in May 2021. Miners had a 3-month window to signal support in their blocks on-chain. The threshold was crossed on June 12, 2021 just weeks into the window. Taproot locked in at block 687,285.</div>
+      </div>
+      <div class="te-step">
+        <div class="te-tag green">Phase 4 Nov 2021</div>
+        <div class="te-num">04</div>
         <div class="te-title">Activation</div>
-        <div class="te-desc">After a mandatory 6-month delay following lock-in, Taproot activated at block 709,632 on November 14, 2021. From that block onward, all nodes running Bitcoin Core 21.1 or later began enforcing the new Taproot rules on every transaction.</div>
+        <div class="te-desc">After a mandatory 6-month delay following lock-in, Taproot activated at block 709,632 on November 14, 2021. From that block onward all nodes running Bitcoin Core 21.1 or later began enforcing the new Taproot rules on every transaction.</div>
       </div>
     </div>
 
@@ -464,119 +473,44 @@ setTimeout(() => {
     <!-- SECTION 2: WHAT IS TAPROOT -->
     <div class="edu-eyebrow">The upgrade itself</div>
     <h2 class="edu-h2">What is Taproot?</h2>
-    <p class="edu-lead">Taproot is actually three Bitcoin Improvement Proposals shipped together — BIP 340, 341, and 342. Together they introduce a new signature scheme, a new way to structure spending conditions, and a new scripting language. The result: more privacy, lower fees, and significantly more flexibility for Bitcoin smart contracts.</p>
+    <p class="edu-lead">Taproot is actually three Bitcoin Improvement Proposals shipped together BIP 340, 341, and 342. Together they introduce a new signature scheme, a new way to structure spending conditions, and a new scripting language. The result: more privacy, lower fees, and significantly more flexibility for Bitcoin smart contracts.</p>
 
     <div class="edu-grid">
       <div class="edu-card">
         <div class="edu-card-icon">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9l4 4 6-8" stroke="#F7931A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>BIP 340 — Schnorr Signatures</h3>
-        <p>Bitcoin originally used ECDSA signatures. Taproot replaces these with <strong>Schnorr signatures</strong> — a mathematically simpler scheme with several advantages. Schnorr signatures are smaller (saving block space), support <strong>key aggregation</strong> (multiple parties can produce a single signature indistinguishable from a regular one), and allow batch verification, making validation faster for nodes.</p>
+        <h3>BIP 340 Schnorr Signatures</h3>
+        <p>Bitcoin originally used ECDSA signatures. Taproot replaces these with <strong>Schnorr signatures</strong> a mathematically simpler scheme with several advantages. Schnorr signatures are smaller (saving block space), support <strong>key aggregation</strong> (multiple parties can produce a single signature indistinguishable from a regular one), and allow batch verification, making validation faster for nodes.</p>
       </div>
       <div class="edu-card">
         <div class="edu-card-icon">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L4 6v6l5 4 5-4V6L9 2z" stroke="#F7931A" stroke-width="1.5" stroke-linejoin="round"/><circle cx="9" cy="9" r="2" fill="#F7931A"/></svg>
         </div>
-        <h3>BIP 341 — Taproot Outputs</h3>
-        <p>Taproot introduces a new output type (P2TR — Pay to Taproot). Every Taproot output commits to both a <strong>key path</strong> (a single public key for the happy path) and a <strong>script path</strong> (a Merkle tree of alternative spending conditions). If all parties cooperate, the output spends via the key path and looks identical to any other simple payment — revealing nothing about the smart contract behind it.</p>
+        <h3>BIP 341 Taproot Outputs</h3>
+        <p>Taproot introduces a new output type (P2TR Pay to Taproot). Every Taproot output commits to both a <strong>key path</strong> (a single public key for the happy path) and a <strong>script path</strong> (a Merkle tree of alternative spending conditions). If all parties cooperate, the output spends via the key path and looks identical to any other simple payment revealing nothing about the smart contract behind it.</p>
       </div>
       <div class="edu-card">
         <div class="edu-card-icon">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="6" height="6" rx="1" stroke="#F7931A" stroke-width="1.5"/><rect x="10" y="2" width="6" height="6" rx="1" stroke="#F7931A" stroke-width="1.5"/><rect x="6" y="10" width="6" height="6" rx="1" stroke="#F7931A" stroke-width="1.5"/></svg>
         </div>
-        <h3>MAST — Merklized Script Trees</h3>
-        <p>Complex Bitcoin contracts often have many possible spending conditions — timelocks, multisig arrangements, hash preimages. Before Taproot, all of those conditions had to be revealed on-chain when spending. With MAST, conditions are arranged in a <strong>Merkle tree</strong>. Only the condition actually used needs to be revealed; the rest remain private. This reduces transaction size and improves privacy significantly.</p>
+        <h3>MAST Merklized Script Trees</h3>
+        <p>Complex Bitcoin contracts often have many possible spending conditions timelocks, multisig arrangements, hash preimages. Before Taproot, all of those conditions had to be revealed on-chain when spending. With MAST, conditions are arranged in a <strong>Merkle tree</strong>. Only the condition actually used needs to be revealed; the rest remain private. This reduces transaction size and improves privacy significantly.</p>
       </div>
       <div class="edu-card">
         <div class="edu-card-icon">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 14l4-4 4 4 6-10" stroke="#F7931A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>BIP 342 — Tapscript</h3>
-        <p>Tapscript is a revised version of Bitcoin's scripting language, used exclusively within Taproot script paths. It makes it easier to add new opcodes in future upgrades, fixes several long-standing limitations of the original Script language, and introduces <strong>per-input signature hashing</strong> that prevents a class of transaction malleability issues. It's designed to be extensible — future soft forks can build on top of it cleanly.</p>
+        <h3>BIP 342 Tapscript</h3>
+        <p>Tapscript is a revised version of Bitcoin's scripting language, used exclusively within Taproot script paths. It makes it easier to add new opcodes in future upgrades, fixes several long-standing limitations of the original Script language, and introduces <strong>per-input signature hashing</strong> that prevents a class of transaction malleability issues. It's designed to be extensible future soft forks can build on top of it cleanly.</p>
       </div>
     </div>
 
     <hr class="edu-divider">
 
-    <!-- GLOSSARY -->
-    <div class="edu-eyebrow" style="margin-bottom:16px">Key terms</div>
-    <div class="glossary">
-      <div class="gl-item">
-        <div class="gl-term">Soft Fork</div>
-        <div class="gl-def">A backward-compatible protocol upgrade. Old nodes remain compatible with new blocks, but don't enforce the new rules.</div>
-      </div>
-      <div class="gl-item">
-        <div class="gl-term">BIP</div>
-        <div class="gl-def">Bitcoin Improvement Proposal. The formal process for proposing changes to the Bitcoin protocol. Taproot comprised BIPs 340, 341, and 342.</div>
-      </div>
-      <div class="gl-item">
-        <div class="gl-term">Signalling</div>
-        <div class="gl-def">Miners indicate support for an upgrade by setting a bit in the version field of blocks they produce. This is an on-chain, verifiable commitment.</div>
-      </div>
-      <div class="gl-item">
-        <div class="gl-term">Speedy Trial</div>
-        <div class="gl-def">A compressed activation method: a 3-month signalling window with a 90% threshold. If met, lock-in occurs followed by a 6-month delay before activation.</div>
-      </div>
-      <div class="gl-item">
-        <div class="gl-term">Lock-in</div>
-        <div class="gl-def">The point at which an upgrade is committed and cannot be reversed, regardless of future miner behaviour. Taproot locked in at block 687,285.</div>
-      </div>
-      <div class="gl-item">
-        <div class="gl-term">Schnorr Signatures</div>
-        <div class="gl-def">A signature scheme that enables key aggregation, batch verification, and is the cryptographic foundation of Taproot (BIP 340).</div>
-      </div>
-      <div class="gl-item">
-        <div class="gl-term">MAST</div>
-        <div class="gl-def">Merklized Alternative Script Trees. Organises spending conditions into a tree where only the used branch is revealed on-chain, improving privacy and efficiency.</div>
-      </div>
-      <div class="gl-item">
-        <div class="gl-term">P2TR</div>
-        <div class="gl-def">Pay to Taproot — the new output type introduced by Taproot. Supports both key path (simple) and script path (complex) spending conditions.</div>
-      </div>
-    </div>
 
-    <!-- FURTHER READING -->
-    <div class="further-reading">
-      <div class="fr-title">Further reading</div>
-      <div class="fr-links">
-        <a class="fr-link" href="https://bitcoinmagazine.com/technical/taproot-coming-what-it-and-how-it-will-benefit-bitcoin" target="_blank">
-          <div style="flex:1">
-            <div class="fr-link-label">Bitcoin Magazine</div>
-            <div class="fr-link-title">Taproot Is Coming: What It Is, And How It Will Benefit Bitcoin — Aaron van Wirdum</div>
-          </div>
-          <div class="fr-arrow">&#8599;</div>
-        </a>
-        <a class="fr-link" href="https://en.bitcoin.it/wiki/Taproot_activation_proposals" target="_blank">
-          <div style="flex:1">
-            <div class="fr-link-label">Bitcoin Wiki</div>
-            <div class="fr-link-title">Taproot activation proposals — full history of the activation debate</div>
-          </div>
-          <div class="fr-arrow">&#8599;</div>
-        </a>
-        <a class="fr-link" href="https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki" target="_blank">
-          <div style="flex:1">
-            <div class="fr-link-label">BIP 341</div>
-            <div class="fr-link-title">Taproot: SegWit version 1 spending rules — the full technical specification</div>
-          </div>
-          <div class="fr-arrow">&#8599;</div>
-        </a>
-        <a class="fr-link" href="https://github.com/bitcoin/bitcoin/pull/21686" target="_blank">
-          <div style="flex:1">
-            <div class="fr-link-label">Bitcoin Core #21686</div>
-            <div class="fr-link-title">Speedy Trial activation parameters — the pull request that set Taproot's activation in motion</div>
-          </div>
-          <div class="fr-arrow">&#8599;</div>
-        </a>
-        <a class="fr-link" href="https://taproot.watch" target="_blank">
-          <div style="flex:1">
-            <div class="fr-link-label">Taproot.watch</div>
-            <div class="fr-link-title">Real-time block signalling tracker used during the Speedy Trial window</div>
-          </div>
-          <div class="fr-arrow">&#8599;</div>
-        </a>
-      </div>
-    </div>
+
+
 
   </div>
 </section>
